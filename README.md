@@ -32,7 +32,7 @@ initialise_logging(bool debug = true)
     lg::destination::pointer dest = lg::stream::sys_log::create();
     lg::logging_level level = lg::info_t;
 
-    // switch to use syslog if we're running in production
+    // switch to use console if we're running in debug mode
     if (!debug)
     {
         dest = lg::stream::std_err::create();
